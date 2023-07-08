@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Data</title>
+</head>
+<body>
+    <h1>Form Data</h1>
+    <form method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required><br><br>
+        
+        <label for="college">College:</label>
+        <input type="text" name="college" id="college" required><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    
+    <h2>Submitted Data:</h2>
+    <ul>
+        {% for data in form_data_list %}
+        <li>{{ data.name }} - {{ data.college }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
